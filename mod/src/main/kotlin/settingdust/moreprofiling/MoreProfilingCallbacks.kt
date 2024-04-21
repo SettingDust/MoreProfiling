@@ -28,7 +28,7 @@ val RESOURCE_PROFILING_DIRECTORY =
     (RecordDumper.DEBUG_PROFILING_DIRECTORY / "resources").also { it.createDirectories() }
 
 fun dumpResourceProfiling(summaries: List<Summary>) {
-    if (!MoreProfilingConfig.common.dumpReloaderDebugResult) return
+    if (!MoreProfilingConfig.common.dumpDebugReloaderResult) return
     val datatime =
         DateTimeFormatter.ofPattern("yyyy-MM-dd_HH.mm.ss.SSS", Locale.UK)
             .withZone(ZoneId.systemDefault())

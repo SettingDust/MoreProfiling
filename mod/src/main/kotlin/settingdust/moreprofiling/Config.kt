@@ -15,7 +15,8 @@ object MoreProfilingConfig {
     @Serializable
     data class CommonConfig(
         val launchProfiling: Boolean = false,
-        val dumpReloaderDebugResult: Boolean = false,
+        val enableDebugReloader: Boolean = false,
+        val dumpDebugReloaderResult: Boolean = false,
         val worldLoadProfiling: Boolean = false,
         val suppressProfilerInfoLogging: Boolean = false
     )
