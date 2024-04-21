@@ -30,6 +30,12 @@ loom {
         register(id) {
             sourceSet(sourceSets["main"])
             sourceSet(sourceSets["client"])
+            dependency(
+                catalog.kotlin.jdk8.get(),
+                catalog.kotlinx.serialization.core.get(),
+                catalog.kotlinx.serialization.json.get(),
+                catalog.kotlinx.coroutines.get(),
+            )
         }
     }
 
@@ -50,6 +56,11 @@ dependencies {
 
     val modClientImplementation by configurations
     modClientImplementation(catalog.modmenu)
+
+    catalog.preloading.tricks.let {
+        implementation(it)
+        include(it)
+    }
 }
 
 kotlin { jvmToolchain(17) }

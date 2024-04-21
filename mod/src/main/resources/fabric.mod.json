@@ -16,6 +16,12 @@
   "icon": "assets/${id}/icon.png",
   "environment": "*",
   "entrypoints": {
+    "preLaunch": [
+      {
+        "adapter": "kotlin",
+        "value": "${group}.EntrypointKt::preLaunch"
+      }
+    ],
     "main": [
       {
         "adapter": "kotlin",

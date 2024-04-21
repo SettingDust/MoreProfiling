@@ -5,7 +5,20 @@ apply(
 val minecraft = settings.extra["minecraft"]
 val kotlin = settings.extra["kotlin"]
 
-dependencyResolutionManagement.versionCatalogs.named("catalog") {}
+dependencyResolutionManagement.versionCatalogs.named("catalog") {
+    library("kotlin-jdk8", "org.jetbrains.kotlin", "kotlin-stdlib-jdk8").version("$kotlin")
+    val kotlinxSerialization = "1.6.3"
+    library("kotlinx-serialization-core", "org.jetbrains.kotlinx", "kotlinx-serialization-core")
+        .version(kotlinxSerialization)
+    library("kotlinx-serialization-json", "org.jetbrains.kotlinx", "kotlinx-serialization-json")
+        .version(kotlinxSerialization)
+    library("kotlinx-coroutines", "org.jetbrains.kotlinx", "kotlinx-coroutines-core")
+        .version("1.8.0")
+    library("kotlin-reflect", "org.jetbrains.kotlin", "kotlin-reflect").version("$kotlin")
+
+    // https://modrinth.com/mod/preloading-tricks/versions
+    library("preloading-tricks", "maven.modrinth", "preloading-tricks").version("1.0.6")
+}
 
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
