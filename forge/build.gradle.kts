@@ -40,10 +40,10 @@ minecraft {
             configureEach { property("connector.clean.path", cleanArtifactJar) }
         }
 
-        create("client") { ideaModule = "FabricKotlinTemplate.forge.main" }
+        create("client") { ideaModule = "MoreProfiling.forge.main" }
 
         create("server") {
-            ideaModule = "FabricKotlinTemplate.forge.main"
+            ideaModule = "MoreProfiling.forge.main"
             args("--nogui")
         }
     }
