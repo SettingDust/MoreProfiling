@@ -1,4 +1,9 @@
 
+## [0.5.0] - 2024-04-21
+### :sparkles: New Features
+- [`c5b456f`](https://github.com/SettingDust/MoreProfiling/commit/c5b456f59acb2869423c50ae4360041f5729f757) - add option to enable debug reloader *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.4.0] - 2024-04-21
 ### :sparkles: New Features
 - [`51527cf`](https://github.com/SettingDust/MoreProfiling/commit/51527cf4cf3d6beb5f164675dc31d0f3743ba88d) - support world loading profiling *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -33,3 +38,4 @@
 [0.2.0]: https://github.com/SettingDust/MoreProfiling/compare/0.1.0...0.2.0
 [0.3.0]: https://github.com/SettingDust/MoreProfiling/compare/0.2.0...0.3.0
 [0.4.0]: https://github.com/SettingDust/MoreProfiling/compare/0.3.0...0.4.0
+[0.5.0]: https://github.com/SettingDust/MoreProfiling/compare/0.4.0...0.5.0
