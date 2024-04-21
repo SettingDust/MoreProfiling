@@ -12,6 +12,8 @@ public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
             return MoreProfilingConfig.INSTANCE.getCommon().getDumpReloaderDebugResult();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.worldloadprofiling"))
             return MoreProfilingConfig.INSTANCE.getCommon().getWorldLoadProfiling();
+        if (mixinClassName.startsWith(" settingdust.moreprofiling.mixin.suppressprofilerinfologging"))
+            return MoreProfilingConfig.INSTANCE.getCommon().getSuppressProfilerInfoLogging();
         return super.shouldApplyMixin(targetClassName, mixinClassName);
     }
 

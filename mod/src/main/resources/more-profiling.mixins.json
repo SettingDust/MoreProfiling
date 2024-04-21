@@ -8,6 +8,7 @@
     "mixins": [
         "dumpreloaderdebugresult.ProfiledResourceReloadMixin",
         "dumpreloaderdebugresult.ProfiledResourceReloadSummaryAccessor",
+        "suppressprofilerinfologging.JfrListenerMixin",
         "worldloadprofiling.MinecraftServerMixin"
     ],
     "client": [
