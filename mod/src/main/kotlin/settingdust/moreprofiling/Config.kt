@@ -4,13 +4,19 @@ import kotlin.io.path.createDirectories
 import kotlin.io.path.createFile
 import kotlin.io.path.div
 import kotlin.io.path.inputStream
+import kotlin.io.path.writeText
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromStream
 import net.fabricmc.loader.api.FabricLoader
 
 object MoreProfilingConfig {
-    @Serializable data class CommonConfig(val launch: Boolean = false)
+    @Serializable
+    data class CommonConfig(
+        val launch: Boolean = false,
+        val dumpResourceReloaderProfiling: Boolean = false
+    )
 
     var common = CommonConfig()
         private set
@@ -37,5 +43,7 @@ object MoreProfilingConfig {
         try {
             common = json.decodeFromStream(commonConfigPath.inputStream())
         } catch (_: Exception) {}
+
+        commonConfigPath.writeText(json.encodeToString(common))
     }
 }

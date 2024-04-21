@@ -18,6 +18,8 @@ dependencyResolutionManagement.versionCatalogs.named("catalog") {
 
     // https://modrinth.com/mod/preloading-tricks/versions
     library("preloading-tricks", "maven.modrinth", "preloading-tricks").version("1.0.6")
+    // https://modrinth.com/mod/modernfix
+    library("modernfix", "maven.modrinth", "modernfix").version("5.16.1+mc$minecraft")
 }
 
 plugins {

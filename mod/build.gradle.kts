@@ -54,6 +54,8 @@ dependencies {
     modImplementation(catalog.fabric.api)
     modImplementation(catalog.fabric.kotlin)
 
+    modRuntimeOnly(catalog.modernfix)
+
     val modClientImplementation by configurations
     modClientImplementation(catalog.modmenu)
 }
