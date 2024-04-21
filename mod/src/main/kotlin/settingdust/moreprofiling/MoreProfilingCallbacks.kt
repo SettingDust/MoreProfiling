@@ -9,12 +9,12 @@ import kotlin.io.path.div
 import net.minecraft.resource.ProfiledResourceReload.Summary
 import net.minecraft.util.profiler.RecordDumper
 import net.minecraft.util.profiling.jfr.FlightProfiler
-import settingdust.moreprofiling.mixin.ProfiledResourceReloadSummaryAccessor
+import settingdust.moreprofiling.mixin.dumpreloaderdebugresult.ProfiledResourceReloadSummaryAccessor
 
 var launchProfiling = false
 
 fun finishGameLaunching() {
-    if (MoreProfilingConfig.common.launch && launchProfiling)
+    if (MoreProfilingConfig.common.launchProfiling && launchProfiling)
         FlightProfiler.INSTANCE.stop().let {
             MoreProfiling.LOGGER.info("Launch profiling finished. Exported to $it")
             launchProfiling = false
@@ -25,7 +25,7 @@ val RESOURCE_PROFILING_DIRECTORY =
     (RecordDumper.DEBUG_PROFILING_DIRECTORY / "resources").also { it.createDirectories() }
 
 fun dumpResourceProfiling(summaries: List<Summary>) {
-    if (!MoreProfilingConfig.common.dumpResourceReloaderProfiling) return
+    if (!MoreProfilingConfig.common.dumpReloaderDebugResult) return
     val datatime =
         DateTimeFormatter.ofPattern("yyyy-MM-dd_HH.mm.ss.SSS", Locale.UK)
             .withZone(ZoneId.systemDefault())

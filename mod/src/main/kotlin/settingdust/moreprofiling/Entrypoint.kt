@@ -16,7 +16,7 @@ object MoreProfiling {
 
 fun preLaunch() {
     SharedConstants.createGameVersion()
-    if (MoreProfilingConfig.common.launch) {
+    if (MoreProfilingConfig.common.launchProfiling) {
         launchProfiling = true
         FlightProfiler.INSTANCE.start(
             when (FabricLoader.getInstance().environmentType!!) {

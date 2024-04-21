@@ -1,4 +1,4 @@
-package settingdust.moreprofiling.mixin;
+package settingdust.moreprofiling.mixin.dumpreloaderdebugresult;
 
 import net.minecraft.resource.ProfiledResourceReload;
 import net.minecraft.util.profiler.ProfileResult;

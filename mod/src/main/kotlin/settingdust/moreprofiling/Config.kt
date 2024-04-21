@@ -14,8 +14,8 @@ import net.fabricmc.loader.api.FabricLoader
 object MoreProfilingConfig {
     @Serializable
     data class CommonConfig(
-        val launch: Boolean = false,
-        val dumpResourceReloaderProfiling: Boolean = false
+        val launchProfiling: Boolean = false,
+        val dumpReloaderDebugResult: Boolean = false
     )
 
     var common = CommonConfig()

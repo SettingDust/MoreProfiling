@@ -58,6 +58,11 @@ dependencies {
 
     val modClientImplementation by configurations
     modClientImplementation(catalog.modmenu)
+
+    catalog.mixin.conditional.let {
+        modImplementation(it)
+        include(it)
+    }
 }
 
 kotlin { jvmToolchain(17) }

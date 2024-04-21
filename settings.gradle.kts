@@ -20,6 +20,9 @@ dependencyResolutionManagement.versionCatalogs.named("catalog") {
     library("preloading-tricks", "maven.modrinth", "preloading-tricks").version("1.0.6")
     // https://modrinth.com/mod/modernfix
     library("modernfix", "maven.modrinth", "modernfix").version("5.16.1+mc$minecraft")
+
+    // https://github.com/Fallen-Breath/conditional-mixin
+    library("mixin-conditional", "me.fallenbreath", "conditional-mixin-fabric").version("0.6.2")
 }
 
 plugins {
