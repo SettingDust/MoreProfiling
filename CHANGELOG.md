@@ -1,4 +1,10 @@
 
+## [0.4.0] - 2024-04-21
+### :sparkles: New Features
+- [`51527cf`](https://github.com/SettingDust/MoreProfiling/commit/51527cf4cf3d6beb5f164675dc31d0f3743ba88d) - support world loading profiling *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`64fee68`](https://github.com/SettingDust/MoreProfiling/commit/64fee687d032de464041630f51c8db383c179e8f) - allow suppress JFR profiler spam info logging *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.3.0] - 2024-04-21
 ### :boom: BREAKING CHANGES
 - due to [`9ab3442`](https://github.com/SettingDust/MoreProfiling/commit/9ab3442cae46b4920a7424833a88486f56f82f59) - rename config options *(commit by [@SettingDust](https://github.com/SettingDust))*:
@@ -26,3 +32,4 @@
 [0.1.0]: https://github.com/SettingDust/MoreProfiling/compare/0.0.0...0.1.0
 [0.2.0]: https://github.com/SettingDust/MoreProfiling/compare/0.1.0...0.2.0
 [0.3.0]: https://github.com/SettingDust/MoreProfiling/compare/0.2.0...0.3.0
+[0.4.0]: https://github.com/SettingDust/MoreProfiling/compare/0.3.0...0.4.0
