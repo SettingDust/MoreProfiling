@@ -10,8 +10,7 @@ import kotlinx.serialization.json.decodeFromStream
 import net.fabricmc.loader.api.FabricLoader
 
 object MoreProfilingConfig {
-    @Serializable
-    data class CommonConfig(val launch: Boolean = false)
+    @Serializable data class CommonConfig(val launch: Boolean = false)
 
     var common = CommonConfig()
         private set

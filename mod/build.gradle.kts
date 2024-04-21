@@ -56,11 +56,6 @@ dependencies {
 
     val modClientImplementation by configurations
     modClientImplementation(catalog.modmenu)
-
-    catalog.preloading.tricks.let {
-        implementation(it)
-        include(it)
-    }
 }
 
 kotlin { jvmToolchain(17) }
