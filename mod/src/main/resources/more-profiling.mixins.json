@@ -6,8 +6,9 @@
     "compatibilityLevel": "JAVA_17",
     "plugin": "settingdust.moreprofiling.mixin.MoreProfilingMixinConfig",
     "mixins": [
+        "dumpreloaderdebugresult.ProfiledResourceReloadMixin",
         "dumpreloaderdebugresult.ProfiledResourceReloadSummaryAccessor",
-        "dumpreloaderdebugresult.ProfiledResourceReloadMixin"
+        "worldloadprofiling.MinecraftServerMixin"
     ],
     "client": [
     ],

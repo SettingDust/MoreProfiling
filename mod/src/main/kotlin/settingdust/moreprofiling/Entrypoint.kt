@@ -28,5 +28,5 @@ fun preLaunch() {
 }
 
 fun init() {
-    ServerLifecycleEvents.SERVER_STARTED.register { finishGameLaunching() }
+    ServerLifecycleEvents.SERVER_STARTED.register { finishLaunchProfiling() }
 }

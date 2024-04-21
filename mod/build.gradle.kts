@@ -56,6 +56,8 @@ dependencies {
 
     modRuntimeOnly(catalog.modernfix)
 
+    modRuntimeOnly(catalog.worldgen.profiling)
+
     val modClientImplementation by configurations
     modClientImplementation(catalog.modmenu)
 

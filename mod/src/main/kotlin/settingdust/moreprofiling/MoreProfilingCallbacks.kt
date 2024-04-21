@@ -6,19 +6,22 @@ import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.io.path.createDirectories
 import kotlin.io.path.div
+import net.fabricmc.api.EnvType
+import net.fabricmc.loader.api.FabricLoader
 import net.minecraft.resource.ProfiledResourceReload.Summary
 import net.minecraft.util.profiler.RecordDumper
 import net.minecraft.util.profiling.jfr.FlightProfiler
+import net.minecraft.util.profiling.jfr.InstanceType
 import settingdust.moreprofiling.mixin.dumpreloaderdebugresult.ProfiledResourceReloadSummaryAccessor
 
 var launchProfiling = false
 
-fun finishGameLaunching() {
-    if (MoreProfilingConfig.common.launchProfiling && launchProfiling)
-        FlightProfiler.INSTANCE.stop().let {
-            MoreProfiling.LOGGER.info("Launch profiling finished. Exported to $it")
-            launchProfiling = false
-        }
+fun finishLaunchProfiling() {
+    if (MoreProfilingConfig.common.launchProfiling && launchProfiling) {
+        val path = FlightProfiler.INSTANCE.stop()
+        MoreProfiling.LOGGER.info("Launch profiling finished. Exported to $path")
+        launchProfiling = false
+    }
 }
 
 val RESOURCE_PROFILING_DIRECTORY =
@@ -35,5 +38,27 @@ fun dumpResourceProfiling(summaries: List<Summary>) {
         summary as ProfiledResourceReloadSummaryAccessor
         summary.applyProfile.save(path / "${summary.name}_apply.txt")
         summary.prepareProfile.save(path / "${summary.name}_prepare.txt")
+    }
+}
+
+var worldLoadProfiling = false
+
+fun startWorldLoading() {
+    if (MoreProfilingConfig.common.worldLoadProfiling) {
+        worldLoadProfiling = true
+        FlightProfiler.INSTANCE.start(
+            when (FabricLoader.getInstance().environmentType!!) {
+                EnvType.CLIENT -> InstanceType.CLIENT
+                EnvType.SERVER -> InstanceType.SERVER
+            }
+        )
+    }
+}
+
+fun finishWorldLoading() {
+    if (MoreProfilingConfig.common.worldLoadProfiling && worldLoadProfiling) {
+        val path = FlightProfiler.INSTANCE.stop()
+        MoreProfiling.LOGGER.info("World loading profiling finished. Exported to $path")
+        worldLoadProfiling = false
     }
 }

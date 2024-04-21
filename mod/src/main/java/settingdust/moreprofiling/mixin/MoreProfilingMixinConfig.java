@@ -10,6 +10,8 @@ public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
     public boolean shouldApplyMixin(final String targetClassName, final String mixinClassName) {
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.dumpreloaderdebugresult"))
             return MoreProfilingConfig.INSTANCE.getCommon().getDumpReloaderDebugResult();
+        if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.worldloadprofiling"))
+            return MoreProfilingConfig.INSTANCE.getCommon().getWorldLoadProfiling();
         return super.shouldApplyMixin(targetClassName, mixinClassName);
     }
 
