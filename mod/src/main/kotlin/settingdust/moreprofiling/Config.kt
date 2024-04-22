@@ -29,6 +29,7 @@ object MoreProfilingConfig {
         val textureManager: Boolean = true,
         val languageManager: Boolean = true,
         val soundManager: Boolean = true,
+        val fontManager: Boolean = true,
     )
 
     var common = CommonConfig()

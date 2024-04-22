@@ -4,6 +4,7 @@ import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 import java.util.*
+import jdk.jfr.Event
 import kotlin.io.path.createDirectories
 import kotlin.io.path.div
 import net.fabricmc.api.EnvType
@@ -13,6 +14,11 @@ import net.minecraft.util.profiler.RecordDumper
 import net.minecraft.util.profiling.jfr.FlightProfiler
 import net.minecraft.util.profiling.jfr.InstanceType
 import settingdust.moreprofiling.mixin.dumpreloaderdebugresult.ProfiledResourceReloadSummaryAccessor
+
+fun MutableList<Class<out Event>>.registerEvents() {
+    registerProfilerEvent()
+    registerResourceLoadingEvents()
+}
 
 var launchProfiling = false
 

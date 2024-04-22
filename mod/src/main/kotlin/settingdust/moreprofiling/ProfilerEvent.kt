@@ -6,6 +6,10 @@ import jdk.jfr.Event
 import jdk.jfr.Label
 import jdk.jfr.Name
 
+fun MutableList<Class<out Event>>.registerProfilerEvent() {
+    add(ProfilerEvent::class.java)
+}
+
 @Name("settingdust.moreprofiling.ProfilerEvent")
 @Label("Profiler")
 @Category("Minecraft")

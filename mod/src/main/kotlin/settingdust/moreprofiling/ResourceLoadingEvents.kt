@@ -5,6 +5,12 @@ import jdk.jfr.Event
 import jdk.jfr.Label
 import jdk.jfr.Name
 
+fun MutableList<Class<out Event>>.registerResourceLoadingEvents() {
+    add(TextureManagerLoadTextureEvent::class.java)
+    add(LanguageManagerLoadLanguagesEvent::class.java)
+    add(SoundManagerRegisterEvent::class.java)
+}
+
 @Name("settingdust.moreprofiling.TextureManagerLoadTextureEvent")
 @Label("Load Texture")
 @Category("Minecraft", "Resources", "Texture Manager")
