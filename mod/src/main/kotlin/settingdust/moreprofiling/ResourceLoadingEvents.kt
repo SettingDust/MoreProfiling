@@ -10,6 +10,10 @@ fun MutableList<Class<out Event>>.registerResourceLoadingEvents() {
     add(LanguageManagerLoadLanguagesEvent::class.java)
     add(SoundManagerRegisterEvent::class.java)
     add(FontManagerLoadEvent::class.java)
+    add(ModelLoadEvent::class.java)
+    add(CitLoadEvent::class.java)
+    add(FindResourcesEvent::class.java)
+    add(FindAllResourcesEvent::class.java)
 }
 
 @Name("settingdust.moreprofiling.TextureManagerLoadTextureEvent")
@@ -45,10 +49,20 @@ data class CitLoadEvent(
     @JvmField @Label("Pack") val pack: String
 ) : Event()
 
-@Name("settingdust.moreprofiling.CitLoadEvent")
+@Name("settingdust.moreprofiling.FindResourcesEvent")
 @Label("Find Resources")
 @Category("Minecraft", "Resources")
 data class FindResourcesEvent(
+    @JvmField @Label("Type") val type: String,
+    @JvmField @Label("Pack") val pack: String,
+    @JvmField @Label("Namespace") val namespace: String,
+    @JvmField @Label("Prefix") val prefix: String,
+) : Event()
+
+@Name("settingdust.moreprofiling.FindAllResourcesEvent")
+@Label("Find All Resources")
+@Category("Minecraft", "Resources")
+data class FindAllResourcesEvent(
     @JvmField @Label("Type") val type: String,
     @JvmField @Label("Pack") val pack: String,
     @JvmField @Label("Namespace") val namespace: String,

@@ -11,7 +11,7 @@
         "dumpreloaderdebugresult.ProfiledResourceReloadSummaryAccessor",
         "enabledebugreloader.SimpleResourceReloadMixin",
         "redirectprofilertojfr.ProfilerSystemMixin",
-        "resourceloadevents.findresources.NamespaceResourceManagerMixin",
+        "resourceloadevents.resourcemanager.NamespaceResourceManagerMixin",
         "resourceloadprofiling.SimpleResourceReloadMixin",
         "suppressprofilerinfologging.JfrListenerMixin",
         "worldloadprofiling.MinecraftServerMixin"
