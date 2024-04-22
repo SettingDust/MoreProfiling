@@ -23,11 +23,7 @@ fun MutableList<Class<out Event>>.registerEvents() {
 var launchProfiling = false
 
 fun finishLaunchProfiling() {
-    if (
-        MoreProfilingConfig.common.launchProfiling &&
-            launchProfiling &&
-            !FlightProfiler.INSTANCE.isProfiling
-    ) {
+    if (MoreProfilingConfig.common.launchProfiling && launchProfiling) {
         val path = FlightProfiler.INSTANCE.stop()
         MoreProfiling.LOGGER.info("Launch profiling finished. Exported to $path")
         launchProfiling = false
