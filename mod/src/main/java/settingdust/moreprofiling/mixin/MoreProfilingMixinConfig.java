@@ -1,9 +1,10 @@
 package settingdust.moreprofiling.mixin;
 
-import java.util.List;
-import java.util.Set;
 import me.fallenbreath.conditionalmixin.api.mixin.RestrictiveMixinConfigPlugin;
 import settingdust.moreprofiling.MoreProfilingConfig;
+
+import java.util.List;
+import java.util.Set;
 
 public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
     @Override
@@ -20,7 +21,7 @@ public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.redirectprofilertojfr"))
             return commonConfig.getRedirectProfilerToJFR();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling")) {
-            var resourceLoadConfig = commonConfig.getResourceLoadProfiling();
+            var resourceLoadConfig = commonConfig.getResourceLoadEvents();
             if (!resourceLoadConfig.getEnable()) return false;
             if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling.texturemanager"))
                 return resourceLoadConfig.getTextureManager();
@@ -31,6 +32,8 @@ public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
             if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling.fontmanager"))
                 return resourceLoadConfig.getFontManager();
         }
+        if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling"))
+            return commonConfig.getResourceLoadProfiling();
         return super.shouldApplyMixin(targetClassName, mixinClassName);
     }
 

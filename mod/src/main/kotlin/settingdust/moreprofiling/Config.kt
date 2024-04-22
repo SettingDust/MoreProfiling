@@ -15,12 +15,13 @@ object MoreProfilingConfig {
     @Serializable
     data class CommonConfig(
         val launchProfiling: Boolean = false,
+        val worldLoadProfiling: Boolean = false,
+        val resourceLoadProfiling: Boolean = false,
         val enableDebugReloader: Boolean = false,
         val dumpDebugReloaderResult: Boolean = false,
-        val worldLoadProfiling: Boolean = false,
         val suppressProfilerInfoLogging: Boolean = false,
         val redirectProfilerToJFR: Boolean = true,
-        val resourceLoadProfiling: ResourceLoadConfig = ResourceLoadConfig(),
+        val resourceLoadEvents: ResourceLoadConfig = ResourceLoadConfig(),
     )
 
     @Serializable
