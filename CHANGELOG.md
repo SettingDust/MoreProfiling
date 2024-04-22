@@ -1,4 +1,9 @@
 
+## [0.6.0] - 2024-04-22
+### :sparkles: New Features
+- [`8690bd7`](https://github.com/SettingDust/MoreProfiling/commit/8690bd7da806fbc9fdfd3811d2081c2b93de6d5a) - add option to redirect Minecraft profiler to JFR event *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.5.0] - 2024-04-21
 ### :sparkles: New Features
 - [`c5b456f`](https://github.com/SettingDust/MoreProfiling/commit/c5b456f59acb2869423c50ae4360041f5729f757) - add option to enable debug reloader *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -39,3 +44,4 @@
 [0.3.0]: https://github.com/SettingDust/MoreProfiling/compare/0.2.0...0.3.0
 [0.4.0]: https://github.com/SettingDust/MoreProfiling/compare/0.3.0...0.4.0
 [0.5.0]: https://github.com/SettingDust/MoreProfiling/compare/0.4.0...0.5.0
+[0.6.0]: https://github.com/SettingDust/MoreProfiling/compare/0.5.0...0.6.0
