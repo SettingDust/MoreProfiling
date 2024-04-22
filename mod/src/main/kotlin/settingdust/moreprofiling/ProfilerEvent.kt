@@ -8,8 +8,6 @@ import jdk.jfr.Name
 
 @Name("settingdust.moreprofiling.ProfilerEvent")
 @Label("Profiler")
-@Category("Minecraft", "Profiler")
+@Category("Minecraft")
 @Description("Redirect Minecraft built in profiler")
-class ProfilerEvent : Event() {
-    @Label("Path") @JvmField var path: String? = null
-}
+data class ProfilerEvent(@Label("Path") @JvmField var path: String? = null) : Event()

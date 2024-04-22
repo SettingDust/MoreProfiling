@@ -8,16 +8,23 @@ import settingdust.moreprofiling.MoreProfilingConfig;
 public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
     @Override
     public boolean shouldApplyMixin(final String targetClassName, final String mixinClassName) {
+        var commonConfig = MoreProfilingConfig.INSTANCE.getCommon();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.enabledebugreloader"))
-            return MoreProfilingConfig.INSTANCE.getCommon().getEnableDebugReloader();
+            return commonConfig.getEnableDebugReloader();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.dumpreloaderdebugresult"))
-            return MoreProfilingConfig.INSTANCE.getCommon().getDumpDebugReloaderResult();
+            return commonConfig.getDumpDebugReloaderResult();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.worldloadprofiling"))
-            return MoreProfilingConfig.INSTANCE.getCommon().getWorldLoadProfiling();
+            return commonConfig.getWorldLoadProfiling();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.suppressprofilerinfologging"))
-            return MoreProfilingConfig.INSTANCE.getCommon().getSuppressProfilerInfoLogging();
+            return commonConfig.getSuppressProfilerInfoLogging();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.redirectprofilertojfr"))
-            return MoreProfilingConfig.INSTANCE.getCommon().getRedirectProfilerToJFR();
+            return commonConfig.getRedirectProfilerToJFR();
+        if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling")) {
+            var resourceLoadConfig = commonConfig.getResourceLoadProfiling();
+            if (!resourceLoadConfig.getEnable()) return false;
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling.texturemanager"))
+                return resourceLoadConfig.getTextureManager();
+        }
         return super.shouldApplyMixin(targetClassName, mixinClassName);
     }
 

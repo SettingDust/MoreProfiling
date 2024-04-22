@@ -8,6 +8,7 @@
         "worldloadprofiling.MinecraftServerMixin"
     ],
     "client": [
+        "resourceloadprofiling.texturemanager.TextureManagerMixin"
     ],
     "injectors": {
         "defaultRequire": 1

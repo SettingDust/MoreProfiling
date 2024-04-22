@@ -25,7 +25,7 @@ public class ProfilerSystemMixin {
             method = "push(Ljava/lang/String;)V",
             at = @At(value = "INVOKE", remap = false, target = "Lit/unimi/dsi/fastutil/longs/LongList;add(J)Z"))
     private void moreprofiling$startJFR(final String location, final CallbackInfo ci) {
-        var profilerEvent = new ProfilerEvent();
+        var profilerEvent = new ProfilerEvent(fullPath.replace(ProfileResult.SPLITTER_CHAR, '/'));
         moreprofiling$currentEvents.put(fullPath, profilerEvent);
         profilerEvent.begin();
     }
@@ -39,7 +39,6 @@ public class ProfilerSystemMixin {
                             target = "Lnet/minecraft/util/profiler/ProfilerSystem;fullPath:Ljava/lang/String;"))
     private void moreprofiling$stopJFR(final CallbackInfo ci) {
         var profilerEvent = moreprofiling$currentEvents.get(fullPath);
-        profilerEvent.path = fullPath.replace(ProfileResult.SPLITTER_CHAR, '/');
         profilerEvent.commit();
         moreprofiling$currentEvents.remove(fullPath);
     }

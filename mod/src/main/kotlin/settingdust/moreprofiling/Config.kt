@@ -19,8 +19,12 @@ object MoreProfilingConfig {
         val dumpDebugReloaderResult: Boolean = false,
         val worldLoadProfiling: Boolean = false,
         val suppressProfilerInfoLogging: Boolean = false,
-        val redirectProfilerToJFR: Boolean = true
+        val redirectProfilerToJFR: Boolean = true,
+        val resourceLoadProfiling: ResourceLoadConfig = ResourceLoadConfig(),
     )
+
+    @Serializable
+    data class ResourceLoadConfig(val enable: Boolean = false, val textureManager: Boolean = true)
 
     var common = CommonConfig()
         private set
