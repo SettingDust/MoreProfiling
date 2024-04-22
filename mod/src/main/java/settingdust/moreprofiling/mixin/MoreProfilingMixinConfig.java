@@ -26,6 +26,8 @@ public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
                 return resourceLoadConfig.getTextureManager();
             if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling.languagemanager"))
                 return resourceLoadConfig.getLanguageManager();
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling.soundmanager"))
+                return resourceLoadConfig.getSoundManager();
         }
         return super.shouldApplyMixin(targetClassName, mixinClassName);
     }

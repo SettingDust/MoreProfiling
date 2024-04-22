@@ -27,7 +27,8 @@ object MoreProfilingConfig {
     data class ResourceLoadConfig(
         val enable: Boolean = false,
         val textureManager: Boolean = true,
-        val languageManager: Boolean = true
+        val languageManager: Boolean = true,
+        val soundManager: Boolean = true,
     )
 
     var common = CommonConfig()
