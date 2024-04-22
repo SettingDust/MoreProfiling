@@ -9,6 +9,7 @@
         "worldloadprofiling.MinecraftServerMixin"
     ],
     "client": [
+        "resourceloadprofiling.modelloader.ModelLoaderMixin",
         "resourceloadprofiling.fontmanager.FontManagerMixin",
         "resourceloadprofiling.languagemanager.LanguageManagerMixin",
         "resourceloadprofiling.soundmanager.SoundManagerMixin",

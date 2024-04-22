@@ -31,3 +31,8 @@ data class SoundManagerRegisterEvent(@JvmField @Label("Identifier") var id: Stri
 @Label("Load")
 @Category("Minecraft", "Resources", "Font Manager")
 data class FontManagerLoadEvent(@JvmField @Label("Identifier") var id: String) : Event()
+
+@Name("settingdust.moreprofiling.ModelLoadEvent")
+@Label("Load")
+@Category("Minecraft", "Resources", "Model")
+data class ModelLoadEvent(@JvmField @Label("Identifier") var id: String) : Event()
