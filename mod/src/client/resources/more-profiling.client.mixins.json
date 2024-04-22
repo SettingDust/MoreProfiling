@@ -8,6 +8,8 @@
         "worldloadprofiling.MinecraftServerMixin"
     ],
     "client": [
+        "resourceloadprofiling.languagemanager.LanguageManagerMixin",
+        "resourceloadprofiling.soundmanager.SoundManagerMixin",
         "resourceloadprofiling.texturemanager.TextureManagerMixin"
     ],
     "injectors": {

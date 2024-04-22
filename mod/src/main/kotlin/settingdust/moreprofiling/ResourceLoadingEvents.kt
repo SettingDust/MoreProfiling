@@ -1,16 +1,16 @@
 package settingdust.moreprofiling
 
 import jdk.jfr.Category
-import jdk.jfr.Description
 import jdk.jfr.Event
 import jdk.jfr.Label
 import jdk.jfr.Name
 
-@Name("settingdust.moreprofiling.ResourceLoadingEvent")
-@Label("Resource Loading")
-@Category("Minecraft")
-@Description("Info for resource loading in minecraft")
-data class ResourceLoadingEvent(
-    @Label("Identifier") @JvmField var id: String? = null,
-    @Label("Owner") @JvmField var owner: String? = null
-) : Event()
+@Name("settingdust.moreprofiling.TextureManagerLoadTextureEvent")
+@Label("Load Texture")
+@Category("Minecraft", "Resources", "Texture Manager")
+data class TextureManagerLoadTextureEvent(@JvmField @Label("Identifier") var id: String) : Event()
+
+@Name("settingdust.moreprofiling.LanguageManagerLoadLanguagesEvent")
+@Label("Load Languages")
+@Category("Minecraft", "Resources", "Language Manager")
+data class LanguageManagerLoadLanguagesEvent(@JvmField @Label("Pack") var pack: String) : Event()

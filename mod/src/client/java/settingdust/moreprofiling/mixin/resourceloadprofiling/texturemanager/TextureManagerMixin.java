@@ -6,24 +6,21 @@ import net.minecraft.client.texture.AbstractTexture;
 import net.minecraft.client.texture.TextureManager;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import settingdust.moreprofiling.ResourceLoadingEvent;
+import settingdust.moreprofiling.TextureManagerLoadTextureEvent;
 
 @Mixin(TextureManager.class)
 public class TextureManagerMixin {
-    @Unique
-    private static final String MOREPROFILING_OWNER = "TextureManager(" + TextureManager.class.getName() + ")";
 
     @Inject(method = "loadTexture", at = @At("HEAD"))
     private void moreprofiling$startEvent(
             final Identifier id,
             final AbstractTexture texture,
             final CallbackInfoReturnable<AbstractTexture> cir,
-            @Share("event") LocalRef<ResourceLoadingEvent> eventRef) {
-        var event = new ResourceLoadingEvent(id.toString(), MOREPROFILING_OWNER);
+            @Share("event") LocalRef<TextureManagerLoadTextureEvent> eventRef) {
+        var event = new TextureManagerLoadTextureEvent(id.toString());
         eventRef.set(event);
         event.begin();
     }
@@ -33,7 +30,7 @@ public class TextureManagerMixin {
             final Identifier id,
             final AbstractTexture texture,
             final CallbackInfoReturnable<AbstractTexture> cir,
-            @Share("event") LocalRef<ResourceLoadingEvent> eventRef) {
+            @Share("event") LocalRef<TextureManagerLoadTextureEvent> eventRef) {
         eventRef.get().commit();
     }
 }

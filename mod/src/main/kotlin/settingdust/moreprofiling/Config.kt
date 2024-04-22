@@ -24,7 +24,11 @@ object MoreProfilingConfig {
     )
 
     @Serializable
-    data class ResourceLoadConfig(val enable: Boolean = false, val textureManager: Boolean = true)
+    data class ResourceLoadConfig(
+        val enable: Boolean = false,
+        val textureManager: Boolean = true,
+        val languageManager: Boolean = true
+    )
 
     var common = CommonConfig()
         private set
