@@ -18,7 +18,8 @@ object MoreProfilingConfig {
         val enableDebugReloader: Boolean = false,
         val dumpDebugReloaderResult: Boolean = false,
         val worldLoadProfiling: Boolean = false,
-        val suppressProfilerInfoLogging: Boolean = false
+        val suppressProfilerInfoLogging: Boolean = false,
+        val redirectProfilerToJFR: Boolean = true
     )
 
     var common = CommonConfig()
