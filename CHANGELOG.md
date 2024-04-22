@@ -1,4 +1,12 @@
 
+## [0.7.0] - 2024-04-22
+### :sparkles: New Features
+- [`8d65345`](https://github.com/SettingDust/MoreProfiling/commit/8d6534562da8b03f68b884438b1900c46d51d077) - actually add option to redirect Minecraft profiler to JFR event *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`2ce4585`](https://github.com/SettingDust/MoreProfiling/commit/2ce4585ad1a9f562bcba81c870788daff43bb23f) - **resourceload**: add option for profiling  TextureManager *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`e84ffab`](https://github.com/SettingDust/MoreProfiling/commit/e84ffab0b0f7e04b44125f84e1c512dad7808752) - **resourceload**: add option for profiling  LanguageManager *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`3cbc52f`](https://github.com/SettingDust/MoreProfiling/commit/3cbc52f5bc6fa737461cbb368c20c57063dc5c8b) - **resourceload**: add option for profiling  SoundManager *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.6.0] - 2024-04-22
 ### :sparkles: New Features
 - [`8690bd7`](https://github.com/SettingDust/MoreProfiling/commit/8690bd7da806fbc9fdfd3811d2081c2b93de6d5a) - add option to redirect Minecraft profiler to JFR event *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -45,3 +53,4 @@
 [0.4.0]: https://github.com/SettingDust/MoreProfiling/compare/0.3.0...0.4.0
 [0.5.0]: https://github.com/SettingDust/MoreProfiling/compare/0.4.0...0.5.0
 [0.6.0]: https://github.com/SettingDust/MoreProfiling/compare/0.5.0...0.6.0
+[0.7.0]: https://github.com/SettingDust/MoreProfiling/compare/0.6.1...0.7.0
