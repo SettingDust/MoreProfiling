@@ -44,3 +44,13 @@ data class CitLoadEvent(
     @JvmField @Label("Identifier") val id: String,
     @JvmField @Label("Pack") val pack: String
 ) : Event()
+
+@Name("settingdust.moreprofiling.CitLoadEvent")
+@Label("Find Resources")
+@Category("Minecraft", "Resources")
+data class FindResourcesEvent(
+    @JvmField @Label("Type") val type: String,
+    @JvmField @Label("Pack") val pack: String,
+    @JvmField @Label("Namespace") val namespace: String,
+    @JvmField @Label("Prefix") val prefix: String,
+) : Event()

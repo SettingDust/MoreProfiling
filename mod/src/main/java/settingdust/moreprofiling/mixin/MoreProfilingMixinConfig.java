@@ -33,7 +33,8 @@ public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
                 return resourceLoadConfig.getFontManager();
             if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.citresewn"))
                 return resourceLoadConfig.getCitResewn();
-
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.findresources"))
+                return resourceLoadConfig.getFindResources();
         }
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling"))
             return commonConfig.getResourceLoadProfiling();
