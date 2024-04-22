@@ -23,7 +23,11 @@ fun MutableList<Class<out Event>>.registerEvents() {
 var launchProfiling = false
 
 fun finishLaunchProfiling() {
-    if (MoreProfilingConfig.common.launchProfiling && launchProfiling) {
+    if (
+        MoreProfilingConfig.common.launchProfiling &&
+            launchProfiling &&
+            !FlightProfiler.INSTANCE.isProfiling
+    ) {
         val path = FlightProfiler.INSTANCE.stop()
         MoreProfiling.LOGGER.info("Launch profiling finished. Exported to $path")
         launchProfiling = false
@@ -51,7 +55,7 @@ fun dumpResourceProfiling(summaries: List<Summary>) {
 var worldLoadProfiling = false
 
 fun startWorldLoading() {
-    if (MoreProfilingConfig.common.worldLoadProfiling) {
+    if (MoreProfilingConfig.common.worldLoadProfiling && !FlightProfiler.INSTANCE.isProfiling) {
         worldLoadProfiling = true
         FlightProfiler.INSTANCE.start(
             when (FabricLoader.getInstance().environmentType!!) {
@@ -73,7 +77,7 @@ fun finishWorldLoading() {
 var resourceLoadProfiling = false
 
 fun startResourceLoading() {
-    if (MoreProfilingConfig.common.worldLoadProfiling) {
+    if (MoreProfilingConfig.common.worldLoadProfiling && !FlightProfiler.INSTANCE.isProfiling) {
         resourceLoadProfiling = true
         FlightProfiler.INSTANCE.start(
             when (FabricLoader.getInstance().environmentType!!) {
