@@ -42,8 +42,9 @@ fun dumpResourceProfiling(summaries: List<Summary>) {
     val path = RESOURCE_PROFILING_DIRECTORY / datatime
     for (summary in summaries) {
         summary as ProfiledResourceReloadSummaryAccessor
-        summary.applyProfile.save(path / "${summary.name}_apply.txt")
-        summary.prepareProfile.save(path / "${summary.name}_prepare.txt")
+        val filename = summary.name.replace(Regex("[^a-zA-Z0-9-_.]"), "_")
+        summary.applyProfile.save(path / "${filename}_apply.txt")
+        summary.prepareProfile.save(path / "${filename}_prepare.txt")
     }
 }
 
