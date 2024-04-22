@@ -1,4 +1,15 @@
 
+## [0.8.0] - 2024-04-22
+### :sparkles: New Features
+- [`cf86631`](https://github.com/SettingDust/MoreProfiling/commit/cf866319401950feb5b0ce1b33be39e43697581d) - **resourceload**: add option for profiling FontManager *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+### :bug: Bug Fixes
+- [`ec03f6e`](https://github.com/SettingDust/MoreProfiling/commit/ec03f6e365c7c229308dd6e77743c685753a621a) - escape the summary name to save as file *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+### :wrench: Chores
+- [`3bb7736`](https://github.com/SettingDust/MoreProfiling/commit/3bb77361e0afe256e96ee5b220ad8d4a5e71c239) - register events into JfrProfiler *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.7.0] - 2024-04-22
 ### :sparkles: New Features
 - [`8d65345`](https://github.com/SettingDust/MoreProfiling/commit/8d6534562da8b03f68b884438b1900c46d51d077) - actually add option to redirect Minecraft profiler to JFR event *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -54,3 +65,4 @@
 [0.5.0]: https://github.com/SettingDust/MoreProfiling/compare/0.4.0...0.5.0
 [0.6.0]: https://github.com/SettingDust/MoreProfiling/compare/0.5.0...0.6.0
 [0.7.0]: https://github.com/SettingDust/MoreProfiling/compare/0.6.1...0.7.0
+[0.8.0]: https://github.com/SettingDust/MoreProfiling/compare/0.7.0...0.8.0
