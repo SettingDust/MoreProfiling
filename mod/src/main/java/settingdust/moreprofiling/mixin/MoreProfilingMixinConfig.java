@@ -8,14 +8,14 @@ import settingdust.moreprofiling.MoreProfilingConfig;
 public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
     @Override
     public boolean shouldApplyMixin(final String targetClassName, final String mixinClassName) {
+        if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.enabledebugreloader"))
+            return MoreProfilingConfig.INSTANCE.getCommon().getEnableDebugReloader();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.dumpreloaderdebugresult"))
             return MoreProfilingConfig.INSTANCE.getCommon().getDumpDebugReloaderResult();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.worldloadprofiling"))
             return MoreProfilingConfig.INSTANCE.getCommon().getWorldLoadProfiling();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.suppressprofilerinfologging"))
             return MoreProfilingConfig.INSTANCE.getCommon().getSuppressProfilerInfoLogging();
-        if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.enabledebugreloader"))
-            return MoreProfilingConfig.INSTANCE.getCommon().getEnableDebugReloader();
         return super.shouldApplyMixin(targetClassName, mixinClassName);
     }
 

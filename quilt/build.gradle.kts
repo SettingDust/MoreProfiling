@@ -20,13 +20,13 @@ repositories {
 
 dependencies {
     minecraft(catalog.minecraft)
-    mappings(variantOf(catalog.yarn) { classifier("v2") })
+    mappings(loom.layered {})
 
-    modRuntimeOnly(catalog.quilt.loader)
-    modRuntimeOnly(catalog.quilt.fabric.api)
-    modRuntimeOnly(catalog.fabric.kotlin) { exclude(module = "fabric-loader") }
+    runtimeOnly(catalog.quilt.loader)
+    runtimeOnly(catalog.quilt.fabric.api)
+    runtimeOnly(catalog.fabric.kotlin) { exclude(module = "fabric-loader") }
 
-    modRuntimeOnly(catalog.modmenu) { exclude(module = "fabric-loader") }
+    runtimeOnly(catalog.modmenu) { exclude(module = "fabric-loader") }
 
     runtimeOnly(project(":mod")) { isTransitive = false }
 }

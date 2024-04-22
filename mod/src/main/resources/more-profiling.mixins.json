@@ -9,6 +9,7 @@
         "dumpreloaderdebugresult.ProfiledResourceReloadMixin",
         "dumpreloaderdebugresult.ProfiledResourceReloadSummaryAccessor",
         "enabledebugreloader.SimpleResourceReloadMixin",
+        "redirectprofilertojfr.ProfilerSystemMixin",
         "suppressprofilerinfologging.JfrListenerMixin",
         "worldloadprofiling.MinecraftServerMixin"
     ],
