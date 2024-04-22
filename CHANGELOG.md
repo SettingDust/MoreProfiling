@@ -1,4 +1,15 @@
 
+## [0.9.1] - 2024-04-22
+### :sparkles: New Features
+- [`d9835b8`](https://github.com/SettingDust/MoreProfiling/commit/d9835b85bc7d1aa8b25ce73dff145fcda26316a1) - **resourceload**: add option for profiling model load *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`66d6b4a`](https://github.com/SettingDust/MoreProfiling/commit/66d6b4ac3a9e9b407e8aca392c9e16d2497ea52e) - add option for profiling resource load *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`69eb245`](https://github.com/SettingDust/MoreProfiling/commit/69eb245fffbcab54dca481a66f33a74b1414994d) - **resourceloadevents**: add event for CIT resewn *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+### :bug: Bug Fixes
+- [`a0913c6`](https://github.com/SettingDust/MoreProfiling/commit/a0913c63a75ad1707fd4307789d763f9f0e64671) - add profiling checks *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`9b65e26`](https://github.com/SettingDust/MoreProfiling/commit/9b65e265e66630082c5569f9e3fb786c361226e6) - wrong condition for finish launch profiling *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.8.0] - 2024-04-22
 ### :sparkles: New Features
 - [`cf86631`](https://github.com/SettingDust/MoreProfiling/commit/cf866319401950feb5b0ce1b33be39e43697581d) - **resourceload**: add option for profiling FontManager *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -66,3 +77,4 @@
 [0.6.0]: https://github.com/SettingDust/MoreProfiling/compare/0.5.0...0.6.0
 [0.7.0]: https://github.com/SettingDust/MoreProfiling/compare/0.6.1...0.7.0
 [0.8.0]: https://github.com/SettingDust/MoreProfiling/compare/0.7.0...0.8.0
+[0.9.1]: https://github.com/SettingDust/MoreProfiling/compare/0.8.0...0.9.1
