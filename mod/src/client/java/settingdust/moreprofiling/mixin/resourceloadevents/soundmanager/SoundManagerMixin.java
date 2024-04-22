@@ -1,4 +1,4 @@
-package settingdust.moreprofiling.mixin.resourceloadprofiling.soundmanager;
+package settingdust.moreprofiling.mixin.resourceloadevents.soundmanager;
 
 import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
 import com.llamalad7.mixinextras.sugar.Share;

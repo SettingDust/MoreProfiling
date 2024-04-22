@@ -65,6 +65,8 @@ dependencies {
         modImplementation(it)
         include(it)
     }
+
+    modImplementation(catalog.cit.resewn)
 }
 
 kotlin { jvmToolchain(17) }

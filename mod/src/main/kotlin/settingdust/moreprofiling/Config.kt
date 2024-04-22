@@ -31,6 +31,7 @@ object MoreProfilingConfig {
         val languageManager: Boolean = true,
         val soundManager: Boolean = true,
         val fontManager: Boolean = true,
+        val citResewn: Boolean = true
     )
 
     var common = CommonConfig()

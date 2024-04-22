@@ -6,14 +6,15 @@
     "compatibilityLevel": "JAVA_17",
     "plugin": "settingdust.moreprofiling.mixin.MoreProfilingMixinConfig",
     "mixins": [
+        "resourceloadevents.citresewn.PackParserMixin",
         "worldloadprofiling.MinecraftServerMixin"
     ],
     "client": [
-        "resourceloadprofiling.modelloader.ModelLoaderMixin",
-        "resourceloadprofiling.fontmanager.FontManagerMixin",
-        "resourceloadprofiling.languagemanager.LanguageManagerMixin",
-        "resourceloadprofiling.soundmanager.SoundManagerMixin",
-        "resourceloadprofiling.texturemanager.TextureManagerMixin"
+        "resourceloadevents.fontmanager.FontManagerMixin",
+        "resourceloadevents.languagemanager.LanguageManagerMixin",
+        "resourceloadevents.modelloader.ModelLoaderMixin",
+        "resourceloadevents.soundmanager.SoundManagerMixin",
+        "resourceloadevents.texturemanager.TextureManagerMixin"
     ],
     "injectors": {
         "defaultRequire": 1

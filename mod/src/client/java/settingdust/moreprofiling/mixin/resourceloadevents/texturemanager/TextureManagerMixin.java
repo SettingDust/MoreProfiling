@@ -1,4 +1,4 @@
-package settingdust.moreprofiling.mixin.resourceloadprofiling.texturemanager;
+package settingdust.moreprofiling.mixin.resourceloadevents.texturemanager;
 
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;

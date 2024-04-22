@@ -25,6 +25,9 @@ dependencyResolutionManagement.versionCatalogs.named("catalog") {
     // https://modrinth.com/mod/worldgen-profiling
     library("worldgen-profiling", "maven.modrinth", "worldgen-profiling").version("1.3.1")
 
+    // https://modrinth.com/mod/cit-resewn
+    library("cit-resewn", "maven.modrinth", "cit-resewn").version("1.1.5+$minecraft")
+
     // https://github.com/Fallen-Breath/conditional-mixin
     library("mixin-conditional", "me.fallenbreath", "conditional-mixin-fabric").version("0.6.2")
 }

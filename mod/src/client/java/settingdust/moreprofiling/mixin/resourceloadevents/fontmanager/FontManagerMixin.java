@@ -1,4 +1,4 @@
-package settingdust.moreprofiling.mixin.resourceloadprofiling.fontmanager;
+package settingdust.moreprofiling.mixin.resourceloadevents.fontmanager;
 
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;

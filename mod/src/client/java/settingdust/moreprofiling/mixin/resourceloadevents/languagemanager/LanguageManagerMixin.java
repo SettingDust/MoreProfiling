@@ -1,4 +1,4 @@
-package settingdust.moreprofiling.mixin.resourceloadprofiling.languagemanager;
+package settingdust.moreprofiling.mixin.resourceloadevents.languagemanager;
 
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;

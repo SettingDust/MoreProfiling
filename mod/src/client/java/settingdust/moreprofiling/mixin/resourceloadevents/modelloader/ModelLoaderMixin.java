@@ -1,4 +1,4 @@
-package settingdust.moreprofiling.mixin.resourceloadprofiling.modelloader;
+package settingdust.moreprofiling.mixin.resourceloadevents.modelloader;
 
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;

@@ -20,17 +20,20 @@ public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
             return commonConfig.getSuppressProfilerInfoLogging();
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.redirectprofilertojfr"))
             return commonConfig.getRedirectProfilerToJFR();
-        if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling")) {
+        if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents")) {
             var resourceLoadConfig = commonConfig.getResourceLoadEvents();
             if (!resourceLoadConfig.getEnable()) return false;
-            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling.texturemanager"))
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.texturemanager"))
                 return resourceLoadConfig.getTextureManager();
-            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling.languagemanager"))
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.languagemanager"))
                 return resourceLoadConfig.getLanguageManager();
-            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling.soundmanager"))
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.soundmanager"))
                 return resourceLoadConfig.getSoundManager();
-            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling.fontmanager"))
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.fontmanager"))
                 return resourceLoadConfig.getFontManager();
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.citresewn"))
+                return resourceLoadConfig.getCitResewn();
+
         }
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling"))
             return commonConfig.getResourceLoadProfiling();
