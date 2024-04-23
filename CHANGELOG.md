@@ -1,4 +1,10 @@
 
+## [0.10.0] - 2024-04-23
+### :sparkles: New Features
+- [`dce4f67`](https://github.com/SettingDust/MoreProfiling/commit/dce4f67f3594848576adafcd596942f0c72dd85f) - **resourceloadevents**: add find resources event *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`25243b2`](https://github.com/SettingDust/MoreProfiling/commit/25243b2c40cc891ac363ba9ee78a6be0dbd2ccf4) - **resourceloadevents**: add find all resources event *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.9.1] - 2024-04-22
 ### :sparkles: New Features
 - [`d9835b8`](https://github.com/SettingDust/MoreProfiling/commit/d9835b85bc7d1aa8b25ce73dff145fcda26316a1) - **resourceload**: add option for profiling model load *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -78,3 +84,4 @@
 [0.7.0]: https://github.com/SettingDust/MoreProfiling/compare/0.6.1...0.7.0
 [0.8.0]: https://github.com/SettingDust/MoreProfiling/compare/0.7.0...0.8.0
 [0.9.1]: https://github.com/SettingDust/MoreProfiling/compare/0.8.0...0.9.1
+[0.10.0]: https://github.com/SettingDust/MoreProfiling/compare/0.9.1...0.10.0
