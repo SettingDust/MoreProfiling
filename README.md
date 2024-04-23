@@ -99,3 +99,15 @@ Recommended to use with
 ![img_2.png](https://github.com/SettingDust/MoreProfiling/blob/main/img_2.png?raw=true)
 
 </details>
+
+- Option for profiling when resource reloading
+
+<details>
+<summary>Option adding resource reload profiling events</summary>
+
+CIT Resewn events supported
+
+![img_3.png](https://github.com/SettingDust/MoreProfiling/blob/main/img_3.png?raw=true)
+![img_4.png](https://github.com/SettingDust/MoreProfiling/blob/main/img_4.png?raw=true)
+
+</details>
