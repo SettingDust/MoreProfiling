@@ -1,4 +1,9 @@
 
+## [0.11.0] - 2024-04-23
+### :sparkles: New Features
+- [`82b1d2a`](https://github.com/SettingDust/MoreProfiling/commit/82b1d2ad32cc5a233b4f62bfbe8a16c9e6c0cdfb) - add event for world gen structure *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.10.0] - 2024-04-23
 ### :sparkles: New Features
 - [`dce4f67`](https://github.com/SettingDust/MoreProfiling/commit/dce4f67f3594848576adafcd596942f0c72dd85f) - **resourceloadevents**: add find resources event *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -85,3 +90,4 @@
 [0.8.0]: https://github.com/SettingDust/MoreProfiling/compare/0.7.0...0.8.0
 [0.9.1]: https://github.com/SettingDust/MoreProfiling/compare/0.8.0...0.9.1
 [0.10.0]: https://github.com/SettingDust/MoreProfiling/compare/0.9.1...0.10.0
+[0.11.0]: https://github.com/SettingDust/MoreProfiling/compare/0.10.0...0.11.0
