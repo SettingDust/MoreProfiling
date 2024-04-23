@@ -28,6 +28,9 @@ dependencyResolutionManagement.versionCatalogs.named("catalog") {
     // https://modrinth.com/mod/cit-resewn
     library("cit-resewn", "maven.modrinth", "cit-resewn").version("1.1.5+$minecraft")
 
+    // https://modrinth.com/mod/cit-resewn
+    library("polytone", "maven.modrinth", "polytone").version("1.20-1.17.8")
+
     // https://github.com/Fallen-Breath/conditional-mixin
     library("mixin-conditional", "me.fallenbreath", "conditional-mixin-fabric").version("0.6.2")
 }

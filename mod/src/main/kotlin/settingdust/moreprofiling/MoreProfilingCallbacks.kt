@@ -18,6 +18,7 @@ import settingdust.moreprofiling.mixin.dumpreloaderdebugresult.ProfiledResourceR
 fun MutableList<Class<out Event>>.registerEvents() {
     registerProfilerEvent()
     registerResourceLoadingEvents()
+    registerWorldGenEvents()
 }
 
 var launchProfiling = false

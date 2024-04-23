@@ -67,6 +67,7 @@ dependencies {
     }
 
     modImplementation(catalog.cit.resewn)
+    modImplementation(catalog.polytone)
 }
 
 kotlin { jvmToolchain(17) }

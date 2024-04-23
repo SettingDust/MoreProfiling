@@ -22,6 +22,7 @@ object MoreProfilingConfig {
         val suppressProfilerInfoLogging: Boolean = false,
         val redirectProfilerToJFR: Boolean = true,
         val resourceLoadEvents: ResourceLoadConfig = ResourceLoadConfig(),
+        val worldGenEvents: WorldGenConfig = WorldGenConfig(),
     )
 
     @Serializable
@@ -34,6 +35,9 @@ object MoreProfilingConfig {
         val citResewn: Boolean = true,
         val findResources: Boolean = true
     )
+
+    @Serializable
+    data class WorldGenConfig(val enable: Boolean = false, val structure: Boolean = true)
 
     var common = CommonConfig()
         private set

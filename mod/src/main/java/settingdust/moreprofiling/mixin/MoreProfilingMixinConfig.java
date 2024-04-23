@@ -36,6 +36,12 @@ public class MoreProfilingMixinConfig extends RestrictiveMixinConfigPlugin {
             if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.findresources"))
                 return resourceLoadConfig.getFindResources();
         }
+        if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.worldgenevents")) {
+            var worldGenConfig = commonConfig.getWorldGenEvents();
+            if (!worldGenConfig.getEnable()) return false;
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.worldgenevents.structure"))
+                return worldGenConfig.getStructure();
+        }
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling"))
             return commonConfig.getResourceLoadProfiling();
         return super.shouldApplyMixin(targetClassName, mixinClassName);
