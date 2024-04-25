@@ -3,6 +3,8 @@ Feel free to open ticket on GitHub for new events
 Recommended to use with
 
 - https://modrinth.com/mod/worldgen-profiling that added events for feature and surface
+- https://modrinth.com/mod/packs-entries-blocker to disable unused pack entries
+- https://modrinth.com/mod/registry-blocker to disable the registries' entries like entities that are lagging.
 
 ## Feature
 

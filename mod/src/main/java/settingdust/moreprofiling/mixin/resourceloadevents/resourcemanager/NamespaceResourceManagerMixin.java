@@ -23,13 +23,6 @@ import java.util.function.Predicate;
 
 @Mixin(NamespaceResourceManager.class)
 public class NamespaceResourceManagerMixin {
-    @Shadow
-    @Final
-    private ResourceType type;
-
-    @Shadow
-    @Final
-    private String namespace;
 
     @ModifyReceiver(
         method = "findResources",
