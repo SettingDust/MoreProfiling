@@ -1,4 +1,9 @@
 
+## [0.12.0] - 2024-06-19
+### :recycle: Refactors
+- [`7e04bf9`](https://github.com/SettingDust/MoreProfiling/commit/7e04bf93536100332605b694205d6f953b120580) - port to 1.21 *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.11.0] - 2024-04-23
 ### :sparkles: New Features
 - [`82b1d2a`](https://github.com/SettingDust/MoreProfiling/commit/82b1d2ad32cc5a233b4f62bfbe8a16c9e6c0cdfb) - add event for world gen structure *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -91,3 +96,4 @@
 [0.9.1]: https://github.com/SettingDust/MoreProfiling/compare/0.8.0...0.9.1
 [0.10.0]: https://github.com/SettingDust/MoreProfiling/compare/0.9.1...0.10.0
 [0.11.0]: https://github.com/SettingDust/MoreProfiling/compare/0.10.0...0.11.0
+[0.12.0]: https://github.com/SettingDust/MoreProfiling/compare/0.11.0...0.12.0
