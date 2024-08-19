@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
-import settingdust.moreprofiling.DensityFunctionApplyEvent;
+import settingdust.moreprofiling.NamedDensityFunctionApplyEvent;
 
 @Mixin(DensityFunctionTypes.RegistryEntryHolder.class)
 public class DensityFunctionTypes$RegistryEntryHolderMixin {
@@ -23,11 +23,10 @@ public class DensityFunctionTypes$RegistryEntryHolderMixin {
     private void moreprofiling$startEvent(
         final DensityFunction.DensityFunctionVisitor visitor,
         final CallbackInfoReturnable<DensityFunction> cir,
-        @Share("event") LocalRef<DensityFunctionApplyEvent> eventRef
+        @Share("event") LocalRef<NamedDensityFunctionApplyEvent> eventRef
     ) {
-        var event = new DensityFunctionApplyEvent(function.getKey()
-                                                          .map(it -> it.getValue().toString())
-                                                          .orElseGet(() -> function.value().getClass().getName()));
+        if (function.getKey().isEmpty()) return;
+        var event = new NamedDensityFunctionApplyEvent(function.getKey().get().getValue().toString());
         eventRef.set(event);
         event.begin();
     }
@@ -36,7 +35,7 @@ public class DensityFunctionTypes$RegistryEntryHolderMixin {
     private void moreprofiling$stopEvent(
         final DensityFunction.DensityFunctionVisitor visitor,
         final CallbackInfoReturnable<DensityFunction> cir,
-        @Share("event") LocalRef<DensityFunctionApplyEvent> eventRef
+        @Share("event") LocalRef<NamedDensityFunctionApplyEvent> eventRef
     ) {
         if (eventRef.get() != null) eventRef.get().commit();
     }
