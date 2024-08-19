@@ -1,11 +1,11 @@
 package settingdust.moreprofiling.mixin.client.resourceloadevents.soundmanager;
 
-import com.llamalad7.mixinextras.injector.ModifyExpressionValue;
+import com.llamalad7.mixinextras.sugar.Local;
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;
+import net.minecraft.client.sound.SoundEntry;
 import net.minecraft.client.sound.SoundManager;
 import net.minecraft.resource.ResourceManager;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.profiler.Profiler;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -13,23 +13,28 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 import settingdust.moreprofiling.SoundManagerRegisterEvent;
 
+import java.util.Map;
+
 @Mixin(SoundManager.class)
 public class SoundManagerMixin {
-    @ModifyExpressionValue(
+    @Inject(
         method = "prepare(Lnet/minecraft/resource/ResourceManager;Lnet/minecraft/util/profiler/Profiler;)Lnet/minecraft/client/sound/SoundManager$SoundList;",
         at = @At(
             value = "INVOKE",
-            ordinal = 1,
-            target = "Lnet/minecraft/util/Identifier;of(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/util/Identifier;"
+            target = "Lnet/minecraft/client/sound/SoundManager$SoundList;register(Lnet/minecraft/util/Identifier;Lnet/minecraft/client/sound/SoundEntry;)V"
         )
     )
-    private Identifier moreprofiling$startEvent(
-        final Identifier original, @Share("event") LocalRef<SoundManagerRegisterEvent> eventRef
+    private void moreprofiling$startEvent(
+        final ResourceManager resourceManager,
+        final Profiler profiler,
+        final CallbackInfoReturnable<SoundManager.SoundList> cir,
+        @Share("event") LocalRef<SoundManagerRegisterEvent> eventRef,
+        @Local String prefix,
+        @Local Map.Entry<String, SoundEntry> entry
     ) {
-        var event = new SoundManagerRegisterEvent(original.toString());
+        var event = new SoundManagerRegisterEvent(prefix + ":" + entry.getKey());
         eventRef.set(event);
         event.begin();
-        return original;
     }
 
     @Inject(

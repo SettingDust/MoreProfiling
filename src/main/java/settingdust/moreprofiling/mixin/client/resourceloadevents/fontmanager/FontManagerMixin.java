@@ -1,10 +1,8 @@
 package settingdust.moreprofiling.mixin.client.resourceloadevents.fontmanager;
 
+import com.llamalad7.mixinextras.sugar.Local;
 import com.llamalad7.mixinextras.sugar.Share;
 import com.llamalad7.mixinextras.sugar.ref.LocalRef;
-import java.util.List;
-import java.util.Set;
-
 import net.minecraft.client.font.FontManager;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
@@ -17,7 +15,9 @@ import settingdust.moreprofiling.FontManagerLoadEvent;
 public class FontManagerMixin {
     @Inject(method = "method_51607", at = @At("HEAD"))
     private void moreprofiling$startEvent(
-        final Set set, final Identifier id, final List fonts, final CallbackInfo ci, @Share("event") LocalRef<FontManagerLoadEvent> eventRef
+        final CallbackInfo ci,
+        @Share("event") LocalRef<FontManagerLoadEvent> eventRef,
+        @Local(argsOnly = true) Identifier id
     ) {
         var event = new FontManagerLoadEvent(id.toString());
         eventRef.set(event);
@@ -26,7 +26,8 @@ public class FontManagerMixin {
 
     @Inject(method = "method_51607", at = @At("TAIL"))
     private void moreprofiling$stopEvent(
-            final CallbackInfo ci, @Share("event") LocalRef<FontManagerLoadEvent> eventRef) {
+        final CallbackInfo ci, @Share("event") LocalRef<FontManagerLoadEvent> eventRef
+    ) {
         eventRef.get().commit();
     }
 }
