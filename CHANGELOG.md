@@ -1,4 +1,9 @@
 
+## [0.13.1] - 2024-08-19
+### :sparkles: New Features
+- [`9c79fbd`](https://github.com/SettingDust/MoreProfiling/commit/9c79fbd33b6bb5678f80d3e47291ab87ad14b8ed) - avoid to string of DF causing lag *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.13.0] - 2024-08-19
 ### :sparkles: New Features
 - [`a7f2d80`](https://github.com/SettingDust/MoreProfiling/commit/a7f2d8035d9e98f424412ae27ce33da030e95137) - add density function event *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -108,3 +113,4 @@
 [0.11.0]: https://github.com/SettingDust/MoreProfiling/compare/0.10.0...0.11.0
 [0.12.0]: https://github.com/SettingDust/MoreProfiling/compare/0.11.0...0.12.0
 [0.13.0]: https://github.com/SettingDust/MoreProfiling/compare/0.12.0...0.13.0
+[0.13.1]: https://github.com/SettingDust/MoreProfiling/compare/0.13.0...0.13.1
