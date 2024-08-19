@@ -37,7 +37,11 @@ object MoreProfilingConfig {
     )
 
     @Serializable
-    data class WorldGenConfig(val enable: Boolean = false, val structure: Boolean = true)
+    data class WorldGenConfig(
+        val enable: Boolean = false,
+        val structure: Boolean = true,
+        val densityFunction: Boolean = true
+    )
 
     var common = CommonConfig()
         private set

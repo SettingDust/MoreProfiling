@@ -43,6 +43,8 @@ public class MoreProfilingMixinConfig implements IMixinConfigPlugin {
             if (!worldGenConfig.getEnable()) return false;
             if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.worldgenevents.structure"))
                 return worldGenConfig.getStructure();
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.worldgenevents.densityfunction"))
+                return worldGenConfig.getDensityFunction();
         }
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadprofiling"))
             return commonConfig.getResourceLoadProfiling();

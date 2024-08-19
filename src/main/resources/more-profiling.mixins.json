@@ -7,6 +7,7 @@
     "plugin": "settingdust.moreprofiling.mixin.MoreProfilingMixinConfig",
     "mixins": [
         "JfrProfilerMixin",
+        "client.resourceloadevents.citresewn.PackParserMixin",
         "dumpreloaderdebugresult.ProfiledResourceReloadMixin",
         "dumpreloaderdebugresult.ProfiledResourceReloadSummaryAccessor",
         "enabledebugreloader.SimpleResourceReloadMixin",
@@ -14,9 +15,9 @@
         "resourceloadevents.resourcemanager.NamespaceResourceManagerMixin",
         "resourceloadprofiling.SimpleResourceReloadMixin",
         "suppressprofilerinfologging.JfrListenerMixin",
+        "worldgenevents.densityfunction.DensityFunctionTypes\$RegistryEntryHolderMixin",
         "worldgenevents.structure.ChunkGeneratorMixin",
-        "worldloadprofiling.MinecraftServerMixin",
-        "client.resourceloadevents.citresewn.PackParserMixin"
+        "worldloadprofiling.MinecraftServerMixin"
     ],
     "client": [
         "client.resourceloadevents.fontmanager.FontManagerMixin",

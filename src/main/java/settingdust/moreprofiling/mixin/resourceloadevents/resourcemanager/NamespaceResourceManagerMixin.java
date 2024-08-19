@@ -40,7 +40,7 @@ public class NamespaceResourceManagerMixin {
         final ResourcePack.ResultConsumer resultConsumer,
         @Share("event") LocalRef<FindResourcesEvent> eventRef
     ) {
-        var event = new FindResourcesEvent(type.name(), instance.getId(), namespace, startingPath);
+        var event = new FindResourcesEvent(type.name(), instance.getName(), namespace, startingPath);
         eventRef.set(event);
         event.begin();
         return instance;
@@ -81,7 +81,7 @@ public class NamespaceResourceManagerMixin {
         final ResourcePack.ResultConsumer resultConsumer,
         @Share("event") LocalRef<FindAllResourcesEvent> eventRef
     ) {
-        var event = new FindAllResourcesEvent(type.name(), instance.getId(), namespace, startingPath);
+        var event = new FindAllResourcesEvent(type.name(), instance.getName(), namespace, startingPath);
         eventRef.set(event);
         event.begin();
         return instance;

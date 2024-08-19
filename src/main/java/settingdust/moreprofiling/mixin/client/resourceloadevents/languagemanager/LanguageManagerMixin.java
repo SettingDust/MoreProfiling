@@ -19,7 +19,7 @@ public class LanguageManagerMixin {
             final ResourcePack pack,
             final CallbackInfo ci,
             @Share("event") LocalRef<LanguageManagerLoadLanguagesEvent> eventRef) {
-        var event = new LanguageManagerLoadLanguagesEvent(pack.getId());
+        var event = new LanguageManagerLoadLanguagesEvent(pack.getName());
         eventRef.set(event);
         event.begin();
     }
