@@ -27,7 +27,7 @@ public class DensityFunctionTypes$RegistryEntryHolderMixin {
     ) {
         var event = new DensityFunctionApplyEvent(function.getKey()
                                                           .map(it -> it.getValue().toString())
-                                                          .orElseGet(() -> function.toString()));
+                                                          .orElseGet(() -> function.value().getClass().getName()));
         eventRef.set(event);
         event.begin();
     }

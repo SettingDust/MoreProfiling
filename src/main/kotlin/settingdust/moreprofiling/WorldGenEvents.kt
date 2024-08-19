@@ -17,4 +17,4 @@ data class StructurePlaceEvent(@JvmField @Label("Identifier") val id: String) : 
 @Name("settingdust.moreprofiling.DensityFunctionApplyEvent")
 @Label("Apply")
 @Category("Minecraft", "World Generation", "Density Function")
-data class DensityFunctionApplyEvent(@JvmField @Label("Identifier") val id: String) : Event()
+data class DensityFunctionApplyEvent(@JvmField @Label("Identifier") var id: String) : Event()
