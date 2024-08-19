@@ -1,4 +1,14 @@
 
+## [0.13.0] - 2024-08-19
+### :sparkles: New Features
+- [`a7f2d80`](https://github.com/SettingDust/MoreProfiling/commit/a7f2d8035d9e98f424412ae27ce33da030e95137) - add density function event *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`05a8a39`](https://github.com/SettingDust/MoreProfiling/commit/05a8a39116c4ba8aaf43cf9d33d8c38581fa8695) - stop profiling after closed *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`029d46d`](https://github.com/SettingDust/MoreProfiling/commit/029d46d0880a2910c48f1335213141767d29baee) - rename the DF event *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+### :wrench: Chores
+- [`d535356`](https://github.com/SettingDust/MoreProfiling/commit/d53535633a4743f589c81add5eb075936871c442) - fix the source in manifest *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.12.0] - 2024-06-19
 ### :recycle: Refactors
 - [`7e04bf9`](https://github.com/SettingDust/MoreProfiling/commit/7e04bf93536100332605b694205d6f953b120580) - port to 1.21 *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -97,3 +107,4 @@
 [0.10.0]: https://github.com/SettingDust/MoreProfiling/compare/0.9.1...0.10.0
 [0.11.0]: https://github.com/SettingDust/MoreProfiling/compare/0.10.0...0.11.0
 [0.12.0]: https://github.com/SettingDust/MoreProfiling/compare/0.11.0...0.12.0
+[0.13.0]: https://github.com/SettingDust/MoreProfiling/compare/0.12.0...0.13.0
