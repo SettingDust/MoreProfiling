@@ -14,7 +14,12 @@ fun MutableList<Class<out Event>>.registerWorldGenEvents() {
 @Category("Minecraft", "World Generation")
 data class StructurePlaceEvent(@JvmField @Label("Identifier") val id: String) : Event()
 
+@Name("settingdust.moreprofiling.TryPlaceStructureEvent")
+@Label("Try Place Structure")
+@Category("Minecraft", "World Generation")
+data class TryPlaceStructureEvent(@JvmField @Label("Identifier") val id: String) : Event()
+
 @Name("settingdust.moreprofiling.DensityFunctionApplyEvent")
 @Label("Apply")
 @Category("Minecraft", "World Generation", "Density Function")
-data class DensityFunctionApplyEvent(@JvmField @Label("Identifier") var id: String) : Event()
+data class NamedDensityFunctionApplyEvent(@JvmField @Label("Identifier") var id: String) : Event()

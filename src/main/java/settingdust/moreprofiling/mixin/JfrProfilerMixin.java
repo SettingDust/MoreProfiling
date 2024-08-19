@@ -1,7 +1,5 @@
 package settingdust.moreprofiling.mixin;
 
-import java.util.ArrayList;
-import java.util.List;
 import jdk.jfr.Event;
 import net.minecraft.util.profiling.jfr.JfrProfiler;
 import org.spongepowered.asm.mixin.Final;
@@ -12,6 +10,9 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import settingdust.moreprofiling.MoreProfilingCallbacksKt;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Mixin(value = JfrProfiler.class, priority = 1001)
 public class JfrProfilerMixin {
