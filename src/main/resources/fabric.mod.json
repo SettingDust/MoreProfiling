@@ -19,13 +19,19 @@
     "preLaunch": [
       {
         "adapter": "kotlin",
-        "value": "${group}.EntrypointKt::preLaunch"
+        "value": "${group}.PreLaunchEntrypoint"
       }
     ],
     "main": [
       {
         "adapter": "kotlin",
-        "value": "${group}.EntrypointKt::init"
+        "value": "${group}.MainEntrypoint"
+      }
+    ],
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "${group}.ClientEntrypoint"
       }
     ]
   },
