@@ -1,4 +1,12 @@
 
+## [0.14.1] - 2024-10-06
+### :bug: Bug Fixes
+- [`05de23d`](https://github.com/SettingDust/MoreProfiling/commit/05de23d6b5d1f9737ed16d7f2d31b701feba7084) - port font manager mixin to 1.21 *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+### :wrench: Chores
+- [`16773f0`](https://github.com/SettingDust/MoreProfiling/commit/16773f03448a7c9793ad08ee66156a95af07ff46) - change the category for place structures events *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.13.1] - 2024-08-19
 ### :sparkles: New Features
 - [`9c79fbd`](https://github.com/SettingDust/MoreProfiling/commit/9c79fbd33b6bb5678f80d3e47291ab87ad14b8ed) - avoid to string of DF causing lag *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -114,3 +122,4 @@
 [0.12.0]: https://github.com/SettingDust/MoreProfiling/compare/0.11.0...0.12.0
 [0.13.0]: https://github.com/SettingDust/MoreProfiling/compare/0.12.0...0.13.0
 [0.13.1]: https://github.com/SettingDust/MoreProfiling/compare/0.13.0...0.13.1
+[0.14.1]: https://github.com/SettingDust/MoreProfiling/compare/0.14.0...0.14.1
