@@ -1,4 +1,9 @@
 
+## [0.14.2] - 2024-10-06
+### :bug: Bug Fixes
+- [`41ba4cc`](https://github.com/SettingDust/MoreProfiling/commit/41ba4ccda4296824666d31f16ae7512eae4369b8) - split the entrypoints to work on server side *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.14.1] - 2024-10-06
 ### :bug: Bug Fixes
 - [`05de23d`](https://github.com/SettingDust/MoreProfiling/commit/05de23d6b5d1f9737ed16d7f2d31b701feba7084) - port font manager mixin to 1.21 *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -123,3 +128,4 @@
 [0.13.0]: https://github.com/SettingDust/MoreProfiling/compare/0.12.0...0.13.0
 [0.13.1]: https://github.com/SettingDust/MoreProfiling/compare/0.13.0...0.13.1
 [0.14.1]: https://github.com/SettingDust/MoreProfiling/compare/0.14.0...0.14.1
+[0.14.2]: https://github.com/SettingDust/MoreProfiling/compare/0.14.1...0.14.2
