@@ -10,6 +10,7 @@ apply("https://github.com/SettingDust/MinecraftGradleScripts/raw/main/fabric.gra
 apply("https://github.com/SettingDust/MinecraftGradleScripts/raw/main/modmenu.gradle.kts")
 
 dependencyResolutionManagement.versionCatalogs.named("catalog") {
+    library("minecraft-fabric-1.21", "com.mojang", "minecraft").version("1.21")
 
     // https://modrinth.com/mod/preloading-tricks/versions
     library("preloading-tricks", "maven.modrinth", "preloading-tricks").version("1.1.0")
@@ -34,3 +35,7 @@ plugins {
 val name: String by settings
 
 rootProject.name = name
+
+include("versions")
+include("versions:1.20.1")
+include("versions:1.21")

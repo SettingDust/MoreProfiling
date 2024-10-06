@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "settingdust.moreprofiling.v1_21.mixin",
+  "refmap": "${id}.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+  ],
+  "client": [
+    "client.resourceloadevents.fontmanager.FontManagerMixin"
+  ]
+}

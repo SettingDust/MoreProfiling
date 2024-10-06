@@ -20,13 +20,9 @@
         "worldloadprofiling.MinecraftServerMixin"
     ],
     "client": [
-        "client.resourceloadevents.fontmanager.FontManagerMixin",
         "client.resourceloadevents.languagemanager.LanguageManagerMixin",
         "client.resourceloadevents.modelloader.ModelLoaderMixin",
         "client.resourceloadevents.soundmanager.SoundManagerMixin",
         "client.resourceloadevents.texturemanager.TextureManagerMixin"
-    ],
-    "injectors": {
-        "defaultRequire": 1
-  }
+    ]
 }
