@@ -1,4 +1,9 @@
 
+## [0.14.4] - 2024-10-07
+### :bug: Bug Fixes
+- [`731da5a`](https://github.com/SettingDust/MoreProfiling/commit/731da5a2e95d2accbd97fc28b8687606614f9339) - missing `FontManagerMixin` on 1.20.1 *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.14.2] - 2024-10-06
 ### :bug: Bug Fixes
 - [`41ba4cc`](https://github.com/SettingDust/MoreProfiling/commit/41ba4ccda4296824666d31f16ae7512eae4369b8) - split the entrypoints to work on server side *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -129,3 +134,4 @@
 [0.13.1]: https://github.com/SettingDust/MoreProfiling/compare/0.13.0...0.13.1
 [0.14.1]: https://github.com/SettingDust/MoreProfiling/compare/0.14.0...0.14.1
 [0.14.2]: https://github.com/SettingDust/MoreProfiling/compare/0.14.1...0.14.2
+[0.14.4]: https://github.com/SettingDust/MoreProfiling/compare/0.14.3...0.14.4
