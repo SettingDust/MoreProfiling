@@ -2,7 +2,7 @@
     "schemaVersion": 1,
     "id": "${id}-1_20_1",
     "version": "${version}",
-    "name": "${name} for 1.21",
+    "name": "${name} for 1.20.1",
     "description": "${description}",
     "authors": [
         "${author}"
