@@ -1,4 +1,9 @@
 
+## [0.14.5] - 2024-10-09
+### :bug: Bug Fixes
+- [`a01e546`](https://github.com/SettingDust/MoreProfiling/commit/a01e546a1dc87a8b337891288fdd46a44efa3cc3) - wrong name for 1.20.1 module *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.14.4] - 2024-10-07
 ### :bug: Bug Fixes
 - [`731da5a`](https://github.com/SettingDust/MoreProfiling/commit/731da5a2e95d2accbd97fc28b8687606614f9339) - missing `FontManagerMixin` on 1.20.1 *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -135,3 +140,4 @@
 [0.14.1]: https://github.com/SettingDust/MoreProfiling/compare/0.14.0...0.14.1
 [0.14.2]: https://github.com/SettingDust/MoreProfiling/compare/0.14.1...0.14.2
 [0.14.4]: https://github.com/SettingDust/MoreProfiling/compare/0.14.3...0.14.4
+[0.14.5]: https://github.com/SettingDust/MoreProfiling/compare/0.14.4...0.14.5
