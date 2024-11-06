@@ -1,4 +1,9 @@
 
+## [0.14.6] - 2024-11-06
+### :bug: Bug Fixes
+- [`aec9b64`](https://github.com/SettingDust/MoreProfiling/commit/aec9b648f926ab08a059b7d7368c56036662fb23) - the resource load profiling is using `worldLoadProfiling` *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.14.5] - 2024-10-09
 ### :bug: Bug Fixes
 - [`a01e546`](https://github.com/SettingDust/MoreProfiling/commit/a01e546a1dc87a8b337891288fdd46a44efa3cc3) - wrong name for 1.20.1 module *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -141,3 +146,4 @@
 [0.14.2]: https://github.com/SettingDust/MoreProfiling/compare/0.14.1...0.14.2
 [0.14.4]: https://github.com/SettingDust/MoreProfiling/compare/0.14.3...0.14.4
 [0.14.5]: https://github.com/SettingDust/MoreProfiling/compare/0.14.4...0.14.5
+[0.14.6]: https://github.com/SettingDust/MoreProfiling/compare/0.14.5...0.14.6
