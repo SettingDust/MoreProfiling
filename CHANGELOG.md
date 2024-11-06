@@ -1,4 +1,9 @@
 
+## [0.14.8] - 2024-11-06
+### :bug: Bug Fixes
+- [`b6837ba`](https://github.com/SettingDust/MoreProfiling/commit/b6837ba18778c75b2b12a2cab9470661a0f482e0) - passed the wrong param to the original *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.14.7] - 2024-11-06
 ### :bug: Bug Fixes
 - [`aa92c5e`](https://github.com/SettingDust/MoreProfiling/commit/aa92c5ece7f67d821195962b217209909a66daf0) - avoid the duplicated refmap json name *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -157,3 +162,4 @@
 [0.14.5]: https://github.com/SettingDust/MoreProfiling/compare/0.14.4...0.14.5
 [0.14.6]: https://github.com/SettingDust/MoreProfiling/compare/0.14.5...0.14.6
 [0.14.7]: https://github.com/SettingDust/MoreProfiling/compare/0.14.6...0.14.7
+[0.14.8]: https://github.com/SettingDust/MoreProfiling/compare/0.14.7...0.14.8
