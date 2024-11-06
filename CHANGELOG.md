@@ -1,4 +1,13 @@
 
+## [0.14.7] - 2024-11-06
+### :bug: Bug Fixes
+- [`aa92c5e`](https://github.com/SettingDust/MoreProfiling/commit/aa92c5ece7f67d821195962b217209909a66daf0) - avoid the duplicated refmap json name *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+### :wrench: Chores
+- [`4131efd`](https://github.com/SettingDust/MoreProfiling/commit/4131efd596f9ada03cf8219a70095477574bd6ff) - simply the mixins with mixinextras *(commit by [@SettingDust](https://github.com/SettingDust))*
+- [`35a5de5`](https://github.com/SettingDust/MoreProfiling/commit/35a5de59432556dc8cf890567764dc2ebe38cb6a) - add icon *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.14.6] - 2024-11-06
 ### :bug: Bug Fixes
 - [`aec9b64`](https://github.com/SettingDust/MoreProfiling/commit/aec9b648f926ab08a059b7d7368c56036662fb23) - the resource load profiling is using `worldLoadProfiling` *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -147,3 +156,4 @@
 [0.14.4]: https://github.com/SettingDust/MoreProfiling/compare/0.14.3...0.14.4
 [0.14.5]: https://github.com/SettingDust/MoreProfiling/compare/0.14.4...0.14.5
 [0.14.6]: https://github.com/SettingDust/MoreProfiling/compare/0.14.5...0.14.6
+[0.14.7]: https://github.com/SettingDust/MoreProfiling/compare/0.14.6...0.14.7
