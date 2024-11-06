@@ -74,7 +74,7 @@ fun finishWorldLoading() {
 var resourceLoadProfiling = false
 
 fun startResourceLoading() {
-    if (MoreProfilingConfig.common.worldLoadProfiling && !FlightProfiler.INSTANCE.isProfiling) {
+    if (MoreProfilingConfig.common.resourceLoadProfiling && !FlightProfiler.INSTANCE.isProfiling) {
         resourceLoadProfiling = true
         FlightProfiler.INSTANCE.start(
             when (FabricLoader.getInstance().environmentType!!) {
@@ -86,7 +86,7 @@ fun startResourceLoading() {
 }
 
 fun finishResourceLoading() {
-    if (MoreProfilingConfig.common.worldLoadProfiling && resourceLoadProfiling) {
+    if (MoreProfilingConfig.common.resourceLoadProfiling && resourceLoadProfiling) {
         val path = FlightProfiler.INSTANCE.stop()
         MoreProfiling.LOGGER.info("Resource loading profiling finished. Exported to $path")
         resourceLoadProfiling = false
