@@ -30,7 +30,7 @@ public class NamespaceResourceManagerMixin {
     ) {
         var event = new FindResourcesEvent(type.name(), instance.getName(), namespace, startingPath);
         event.begin();
-        original.call(instance, type, namespace, namespace, resultConsumer);
+        original.call(instance, type, namespace, startingPath, resultConsumer);
         event.commit();
     }
 
@@ -52,7 +52,7 @@ public class NamespaceResourceManagerMixin {
     ) {
         var event = new FindAllResourcesEvent(type.name(), instance.getName(), namespace, startingPath);
         event.begin();
-        original.call(instance, type, namespace, namespace, resultConsumer);
+        original.call(instance, type, namespace, startingPath, resultConsumer);
         event.commit();
     }
 }
