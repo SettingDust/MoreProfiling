@@ -15,7 +15,7 @@ import net.minecraft.util.profiling.jfr.InstanceType
 import org.apache.logging.log4j.LogManager
 
 object MoreProfiling {
-    val ID = "more-profiling"
+    const val ID = "more-profiling"
 
     val LOGGER = LogManager.getLogger()!!
 }
