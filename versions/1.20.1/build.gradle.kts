@@ -12,15 +12,13 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 
     withSourcesJar()
-
-    withJavadocJar()
 }
 
 loom {
     mixin {
-        defaultRefmapName = "$id.refmap.json"
+        defaultRefmapName = "$id-1.20.1.refmap.json"
 
-        add("main", "$id.refmap.json")
+        add("main", defaultRefmapName.get())
     }
 
     runs { configureEach { vmArgs("-Dmixin.debug.export=true", "-Dmixin.debug.verbose=true", "-Dmixin.debug.countInjections=true") } }

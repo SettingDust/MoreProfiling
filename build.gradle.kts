@@ -70,7 +70,6 @@ dependencies {
 
     modImplementation(catalog.modmenu)
 
-
     modRuntimeOnly(catalog.modernfix)
 
     modCompileOnly(catalog.cit.resewn)
