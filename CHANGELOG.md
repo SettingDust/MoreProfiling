@@ -1,4 +1,9 @@
 
+## [0.15.0] - 2024-11-07
+### :sparkles: New Features
+- [`ce134c8`](https://github.com/SettingDust/MoreProfiling/commit/ce134c8ac04019dd108c0d8422636eba9713b92b) - add event for reading resource *(commit by [@SettingDust](https://github.com/SettingDust))*
+
+
 ## [0.14.8] - 2024-11-06
 ### :bug: Bug Fixes
 - [`b6837ba`](https://github.com/SettingDust/MoreProfiling/commit/b6837ba18778c75b2b12a2cab9470661a0f482e0) - passed the wrong param to the original *(commit by [@SettingDust](https://github.com/SettingDust))*
@@ -163,3 +168,4 @@
 [0.14.6]: https://github.com/SettingDust/MoreProfiling/compare/0.14.5...0.14.6
 [0.14.7]: https://github.com/SettingDust/MoreProfiling/compare/0.14.6...0.14.7
 [0.14.8]: https://github.com/SettingDust/MoreProfiling/compare/0.14.7...0.14.8
+[0.15.0]: https://github.com/SettingDust/MoreProfiling/compare/0.14.8...0.15.0
