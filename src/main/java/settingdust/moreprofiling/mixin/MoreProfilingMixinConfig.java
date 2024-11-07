@@ -25,18 +25,20 @@ public class MoreProfilingMixinConfig implements IMixinConfigPlugin {
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents")) {
             var resourceLoadConfig = commonConfig.getResourceLoadEvents();
             if (!resourceLoadConfig.getEnable()) return false;
-            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.texturemanager"))
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.client.resourceloadevents.texturemanager"))
                 return resourceLoadConfig.getTextureManager();
-            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.languagemanager"))
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.client.resourceloadevents.languagemanager"))
                 return resourceLoadConfig.getLanguageManager();
-            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.soundmanager"))
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.client.resourceloadevents.soundmanager"))
                 return resourceLoadConfig.getSoundManager();
-            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.fontmanager"))
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.client.resourceloadevents.fontmanager"))
                 return resourceLoadConfig.getFontManager();
-            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.citresewn"))
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.client.resourceloadevents.citresewn"))
                 return resourceLoadConfig.getCitResewn();
             if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.findresources"))
                 return resourceLoadConfig.getFindResources();
+            if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.resourceloadevents.readresource"))
+                return resourceLoadConfig.getReadResource();
         }
         if (mixinClassName.startsWith("settingdust.moreprofiling.mixin.worldgenevents")) {
             var worldGenConfig = commonConfig.getWorldGenEvents();

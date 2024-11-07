@@ -1,9 +1,13 @@
 package settingdust.moreprofiling
 
+import java.io.FilterInputStream
+import java.io.InputStream
 import jdk.jfr.Category
 import jdk.jfr.Event
 import jdk.jfr.Label
 import jdk.jfr.Name
+import net.minecraft.resource.InputSupplier
+import net.minecraft.util.Identifier
 
 fun MutableList<Class<out Event>>.registerResourceLoadingEvents() {
     add(TextureManagerLoadTextureEvent::class.java)
@@ -14,6 +18,42 @@ fun MutableList<Class<out Event>>.registerResourceLoadingEvents() {
     add(CitLoadEvent::class.java)
     add(FindResourcesEvent::class.java)
     add(FindAllResourcesEvent::class.java)
+}
+
+@Name("settingdust.moreprofiling.ResourceManagerReadResourceEvent")
+@Label("Read Resource")
+@Category("Minecraft", "Resources")
+data class ResourceManagerReadResourceEvent(
+    @JvmField @Label("Pack") val pack: String,
+    @JvmField @Label("Id") val id: String
+) : Event() {
+    class ProfilingStream(
+        val wrapped: InputStream,
+        val id: Identifier,
+        val packName: String,
+        val onFinish: () -> Unit
+    ) : FilterInputStream(wrapped) {
+        companion object {
+            fun wrap(
+                stream: InputSupplier<InputStream>,
+                id: Identifier,
+                packName: String
+            ): InputSupplier<InputStream> {
+                return InputSupplier {
+                    val event = ResourceManagerReadResourceEvent(packName, id.toString())
+                    event.begin()
+                    ProfilingStream(stream.get(), id, packName) {
+                        event.commit()
+                    }
+                }
+            }
+        }
+
+        override fun close() {
+            super.close()
+            onFinish()
+        }
+    }
 }
 
 @Name("settingdust.moreprofiling.TextureManagerLoadTextureEvent")

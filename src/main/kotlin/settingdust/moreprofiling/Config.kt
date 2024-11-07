@@ -28,6 +28,7 @@ object MoreProfilingConfig {
     @Serializable
     data class ResourceLoadConfig(
         val enable: Boolean = false,
+        val readResource: Boolean = true,
         val textureManager: Boolean = true,
         val languageManager: Boolean = true,
         val soundManager: Boolean = true,
